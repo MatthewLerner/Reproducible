@@ -88,18 +88,6 @@ We first load the zoo package. Then we create a new "activity" dataset, "activit
 
 ```r
 library(zoo)
-```
-
-```
-## 
-## Attaching package: 'zoo'
-## 
-## The following objects are masked from 'package:base':
-## 
-##     as.Date, as.Date.numeric
-```
-
-```r
 activity2 <- activity
 activity2$steps <-na.locf(na.locf(activity2$steps,na.rm=FALSE),fromLast = TRUE, na.rm=FALSE)
 ```
